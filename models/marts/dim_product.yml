@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim_product
+    description: "Product dimension including aisle information."
+    columns:
+      - name: product_name
+        description: "Product name."
+        tests:
+          - not_null
+      - name: aisle
+        description: "Aisle/category for the product."
+        tests:
+          - not_null
+    tests:
+      - unique_product_aisle
+

@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: "Calendar date dimension generated with dbt_date package."
+    columns:
+      - name: date_day
+        description: "The calendar date."
+        tests:
+          - not_null
+          - unique

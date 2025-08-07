@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: raw
+    database: grocery
+    schema: raw
+    tables:
+      - name: grocery_sales
+        description: "Alap értékesítési adatok a grocery boltban"
+        columns:
+          - name: customer_id
+            description: "A vásárló azonosítója"
+          - name: store_name
+            description: "Bolt neve"
+          - name: transaction_date
+            description: "Vásárlás dátuma"
+          - name: aisle
+            description: "Folyosó/kategória"
+          - name: product_name
+            description: "Termék neve"
+          - name: quantity
+            description: "Mennyiség (db)"
+          - name: unit_price
+            description: "Egységár"
+          - name: total_amount
+          - name: discount_amount
+          - name: final_amount
+          - name: loyalty_points
+

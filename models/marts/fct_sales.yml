@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: fct_sales
+    description: "Sales fact table at the transaction level. References dim_product via product_key and dim_store via store_name."
+    columns:
+      - name: product_key
+        description: "Surrogate key referencing dim_product."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_product')
+              field: product_key
+
+      - name: store_name
+        description: "Natural key referencing dim_store."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_store')
+              field: store_name
+
+      - name: customer_id
+        description: "Customer identifier as present in the source."
+
+      - name: transaction_date
+        description: "Date when the transaction occurred."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_day
+
+      - name: quantity
+        description: "Units purchased."
+        tests:
+          - not_null
+
+      - name: unit_price
+        description: "Price per unit."
+
+      - name: final_amount
+        description: "Final amount paid after discounts."
+        tests:
+          - not_null
+
+      - name: loyalty_points
+        description: "Loyalty points awarded for the transaction."

@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_store
+    description: "List of unique stores"
+    columns:
+      - name: store_name
+        description: "Name of the stores."
+        tests:
+          - not_null
+          - unique
