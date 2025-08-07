@@ -62,9 +62,5 @@ The project includes **generic dbt tests** for:
 
 ---
 
-## 🚀 How to Run
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+## ✨ Author
+**Built by Dávid Galda as part of a Data Engineering learning project.**
